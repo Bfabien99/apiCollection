@@ -110,7 +110,7 @@ class googleTranslate
             echo "cURL Error #:" . $err;
         } else {
             $data = json_decode($response, true);
-            return $data;
+            return $data["data"]["translations"][0]["translatedText"];
         }
     }
 }
